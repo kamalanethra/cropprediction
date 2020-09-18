@@ -1,0 +1,161 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>#1 HTML Login Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+    --body_gradient_left: #7200D0;
+    --body_gradient_right: #C800C1;
+    --form_bg: #ffffff;
+    --input_bg: #E5E5E5;
+    --input_hover: #eaeaea;
+    --submit_bg: #808000;
+    --submit_hover: #926239;
+    --icon_color: #6b6b6b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* make the body full height*/
+    height: 100vh;
+    /* set our custom font */
+    font-family: 'Roboto',
+        sans-serif;
+    color: var(--submit_bg);
+    /* create a linear gradient*/
+    background-image: url('entry.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+#form {
+    width: 900px;
+    height: 600px;
+    /* this will help us center it*/
+    margin: auto;
+    background-color: var(--form_bg);
+    border-radius: 50px;
+    /* make it a grid container*/
+    display: grid;
+    grid-template-columns: 1fr;/
+    /* add some padding around */
+    padding: 5vh 15px;
+}
+
+
+h2,
+span {
+    text-align: center;
+}
+
+.input_container {
+    background-color: var(--input_bg);
+    /* vertically align icon and text inside the div*/
+    display: flex;
+    padding-left: 20px;
+}
+
+.input_container:hover {
+    background-color: var(--input_hover);
+}
+
+.input_container,
+#input_submit {
+    height: 60px;
+    /* make the borders more round */
+    border-radius: 30px;
+    width: 100%;
+}
+
+.input_field {
+    /* customize the input tag with lighter font and some padding*/
+    color: var(--icon_color);
+    background-color: inherit;
+    width: 90%;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-left: 30px;
+}
+
+.input_field:hover,
+.input_field:focus {
+    /* remove the outline */
+    outline: none;
+}
+
+#input_submit {
+    /* submit button has a different color and different padding */
+    background-color:var(--submit_bg);
+    padding-left: 0;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+#input_submit:hover {
+    background-color: var(--submit_hover);
+    /* simple color transition on hover */
+    transition: background-color,
+        1s;
+    cursor: pointer;
+}
+
+
+a {
+    /* remove default underline */
+    text-decoration: none;
+    color: var(--submit_bg);
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--submit_hover);
+}
+
+
+/* make it responsive */
+@media screen and (max-width:768px) {
+
+    /* make the layout  a single column and add some margin to the wrapper */
+    #form {
+        grid-template-columns: 1fr;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+</style>
+</head>
+<body>
+    <div id="form">
+        <h2>Member Registration</h2>
+        <div class="input_container">
+                <input placeholder="First Name" type="text" name="firstname" id="field_firstname" class='input_field'>
+            </div>
+            <div class="input_container">
+                <input  placeholder="Last Name" type="text" name="lastname" id="field_lastname" class='input_field'>
+            </div>
+            <div class="input_container">
+                <input  placeholder="Email" type="email" name="Email" id="field_email" class='input_field'>
+            </div>
+            <div class="input_container">
+                <input  placeholder="Password" type="Password" name="password" id="field_password" class='input_field'>
+            </div>
+            <div class="input_container">
+                <input  placeholder="Location" type="text" name="location" id="field_location" class='input_field'>
+            </div>
+
+            <input type="submit" value="Submit" id='input_submit' class='input_field'>
+    </div>
+
+    </body>
+    </html>
